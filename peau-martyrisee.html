@@ -706,6 +706,63 @@
       text-transform: uppercase;
     }
 
+    /* ========== PROCESS GALLERY ========== */
+    .process-gallery {
+      background: var(--white);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .process-gallery h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item:nth-child(5) img {
+      height: 250px;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(13, 24, 70, 0.8));
+      color: var(--white);
+      padding: 30px 15px 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
     /* ========== ENGAGEMENT SECTION ========== */
     .engagement-section {
       background: var(--white);
@@ -1098,6 +1155,28 @@
         max-width: 700px;
         gap: 20px;
       }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+      }
+
+      .gallery-item:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      .gallery-item:nth-child(4),
+      .gallery-item:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .gallery-item img {
+        height: 220px;
+      }
+
+      .gallery-item:nth-child(5) img {
+        height: 220px;
+      }
     }
 
     /* Respect motion preferences */
@@ -1341,6 +1420,33 @@
           <p>Plus de rasoir, plus d'irritation, plus de complexes. Une peau parfaite, pour toujours.</p>
           <span class="timeline-badge">Garanti</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS GALLERY -->
+  <section class="process-gallery">
+    <h2>Découvrez notre centre</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="1gelepilation.jpeg" alt="Application du gel d'épilation">
+        <span class="gallery-caption">Application du gel</span>
+      </div>
+      <div class="gallery-item">
+        <img src="2demarcationdeszones.jpeg" alt="Démarcation des zones à traiter">
+        <span class="gallery-caption">Démarcation des zones</span>
+      </div>
+      <div class="gallery-item">
+        <img src="3gelesurzone.jpeg" alt="Gel sur la zone de traitement">
+        <span class="gallery-caption">Préparation de la zone</span>
+      </div>
+      <div class="gallery-item">
+        <img src="4epilationdefinitivemachine.jpeg" alt="Machine d'épilation définitive">
+        <span class="gallery-caption">Traitement laser</span>
+      </div>
+      <div class="gallery-item">
+        <img src="5salleepilation.jpeg" alt="Salle d'épilation Dépil Plus">
+        <span class="gallery-caption">Notre salle de traitement</span>
       </div>
     </div>
   </section>
