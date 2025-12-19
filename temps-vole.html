@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marre de perdre du temps avec le rasoir tous les 2 jours ? Épilation laser définitive à Villeurbanne - Dépil Plus. Offre d'ouverture -50% jusqu'au 31 janvier.">
+  <meta name="robots" content="index, follow">
+  <title>Arrête de perdre ton temps | Épilation Définitive | Dépil Plus</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  :root {
+      --orange: #ff8200;
+      --blue: #0d1846;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --gray-light: #e5e5e5;
+      --gray-text: #6b7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--blue);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0 60px;
+    }
+
+    /* ========== HERO IMAGE ========== */
+    .hero-image {
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero-image > img:first-child {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+
+    .hero-logo-overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 60px;
+      height: auto;
+      z-index: 10;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .hero-logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content {
+      text-align: center;
+      color: var(--blue);
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .hero-hook {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hero-hook .highlight {
+      color: var(--orange);
+    }
+
+    .hero-subhook {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .hero-question {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    /* ========== FORM CARD ========== */
+    .form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 28px 24px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .form-intro {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--blue);
+      margin-bottom: 20px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .form-intro strong {
+      color: var(--orange);
+    }
+
+    .urgency-banner {
+      background: linear-gradient(90deg, #ff8200, #ff5500);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 15px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .hidden-field {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .hidden-field.visible {
+      display: block;
+      opacity: 1;
+    }
+
+    .submit-btn.hidden-field.visible {
+      display: block;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #f5f5f5;
+      font-size: 0.95rem;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--blue);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--orange);
+    }
+
+    .form-group input::placeholder {
+      color: #9ca3af;
+    }
+
+    .zones-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .zone-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border: 1px solid var(--gray-light);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .zone-option:hover {
+      border-color: var(--orange);
+    }
+
+    .zone-option.highlight {
+      border: 2px solid var(--orange);
+      background: rgba(255, 130, 0, 0.05);
+    }
+
+    .zone-option input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+
+    .zone-option span {
+      flex: 1;
+      margin-left: 12px;
+      font-size: 0.95rem;
+      color: var(--blue);
+    }
+
+    .promo-badge {
+      background: linear-gradient(90deg, #ff8200, #ff5500);
+      color: #ffffff !important;
+      font-size: 0.35rem;
+      font-weight: 600;
+      padding: 2px 3px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .promo-badge {
+        font-size: 0.55rem;
+        padding: 3px 6px;
+      }
+    }
+
+    .consent-group.hidden-field {
+      display: none;
+    }
+
+    .consent-group.hidden-field.visible {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .consent-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--orange);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .consent-group label {
+      font-size: 0.8rem;
+      color: var(--gray-text);
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #e67500;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 130, 0, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .form-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--gray-light);
+    }
+
+    .form-footer-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-text);
+    }
+
+    .form-footer-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--orange);
+    }
+
+    /* ========== SCROLL INDICATOR ========== */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    .scroll-indicator svg {
+      width: 30px;
+      height: 30px;
+      color: var(--white);
+      opacity: 0.8;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    /* ========== PAIN POINT SECTION ========== */
+    .pain-section {
+      background: var(--cream);
+      padding: 50px 20px;
+    }
+
+    .pain-section h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.3;
+    }
+
+    .pain-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .pain-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .pain-card-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .pain-card p {
+      font-size: 0.95rem;
+      color: var(--blue);
+      line-height: 1.5;
+    }
+
+    .pain-card p strong {
+      color: var(--orange);
+    }
+
+    /* ========== WHY SECTION ========== */
+    .why-section {
+      background: var(--white);
+      padding: 50px 20px;
+    }
+
+    .why-section h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .why-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .why-card {
+      position: relative;
+      background: transparent;
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+      padding: 24px 20px;
+      padding-left: 30px;
+    }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background: var(--orange);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .why-card h3 {
+      color: var(--orange);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: var(--blue);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .why-card-icon {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      color: var(--orange);
+      fill: var(--orange);
+    }
+
+    .why-card:has(.why-card-icon)::before {
+      display: none;
+    }
+
+    /* ========== PROCESS SECTION ========== */
+    .process-section {
+      background: var(--cream);
+      padding: 50px 20px;
+    }
+
+    .process-section h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+      padding-left: 60px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 40px;
+      bottom: 40px;
+      width: 3px;
+      background: var(--orange);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 35px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-icon {
+      position: absolute;
+      left: -45px;
+      width: 50px;
+      height: 50px;
+      background: var(--white);
+      border: 3px solid var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .timeline-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--orange);
+    }
+
+    .timeline-number {
+      position: absolute;
+      left: -10px;
+      top: -5px;
+      width: 22px;
+      height: 22px;
+      background: var(--orange);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline-content {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .timeline-content h3 {
+      color: var(--blue);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-content p {
+      color: var(--gray-text);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .timeline-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    /* ========== ENGAGEMENT SECTION ========== */
+    .engagement-section {
+      background: var(--white);
+      padding: 50px 20px;
+    }
+
+    .engagement-section h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 1.9rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .engagement-section .subtitle {
+      color: var(--blue);
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 35px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    .engagement-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 500px;
+      margin: 0 auto 30px;
+    }
+
+    .engagement-card {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .engagement-card-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .engagement-card p {
+      font-size: 0.95rem;
+      color: var(--blue);
+    }
+
+    .engagement-card p strong {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 16px;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e67500;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 130, 0, 0.4);
+    }
+
+    /* ========== CONTACT SECTION ========== */
+    .contact-section {
+      background: var(--cream);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .contact-section .intro {
+      color: var(--gray-text);
+      font-size: 0.95rem;
+      max-width: 350px;
+      margin: 0 auto 30px;
+      line-height: 1.5;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+    }
+
+    .contact-item-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .contact-item-text small {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    /* ========== OTHER ANGLES SECTION ========== */
+    .other-angles {
+      background: var(--cream);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .other-angles h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .hub-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .hub-card {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .hub-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 130, 0, 0.3);
+    }
+
+    .hub-card-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .hub-card h3 {
+      color: var(--blue);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hub-card p {
+      color: var(--gray-text);
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .hub-card-btn {
+      display: inline-block;
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--white);
+      padding: 25px 20px;
+      text-align: center;
+      border-top: 1px solid var(--gray-light);
+    }
+
+    .footer p {
+      color: var(--blue);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .footer .legal {
+      color: var(--gray-text);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ========== DESKTOP STYLES ========== */
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: 0 0 80px;
+      }
+
+      .hero-image {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 40px;
+      }
+
+      .hero-image > img:first-child {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .hero-logo-overlay {
+        top: 20px;
+        left: 20px;
+        width: 100px;
+      }
+
+      .hero-logo {
+        width: 150px;
+      }
+
+      .hero-hook {
+        font-size: 2.5rem;
+      }
+
+      .hero-subhook {
+        font-size: 1.2rem;
+      }
+
+      .hero-question {
+        font-size: 1.6rem;
+      }
+
+      .form-card {
+        padding: 35px 40px;
+        max-width: 450px;
+      }
+
+      .why-section h2,
+      .process-section h2,
+      .contact-section h2 {
+        font-size: 2.5rem;
+      }
+
+      .engagement-section h2 {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-section {
+        min-height: 100vh;
+        padding: 0;
+        flex-direction: row;
+        align-items: stretch;
+        background: var(--cream);
+      }
+
+      .hero-image {
+        width: 60%;
+        margin-bottom: 0;
+        height: 100vh;
+      }
+
+      .hero-image > img:first-child {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-right {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        background: var(--cream);
+      }
+
+      .hero-content {
+        color: var(--blue);
+      }
+
+      .hero-hook {
+        text-shadow: none;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+
+      .form-card {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .why-cards {
+        flex-direction: row;
+        max-width: 1000px;
+      }
+
+      .why-card {
+        flex: 1;
+      }
+
+      .engagement-cards {
+        flex-direction: row;
+        max-width: 900px;
+      }
+
+      .engagement-card {
+        flex: 1;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+      }
+
+      .pain-cards {
+        flex-direction: row;
+        max-width: 900px;
+      }
+
+      .hub-cards {
+        flex-direction: row;
+        max-width: 700px;
+        gap: 20px;
+      }
+
+      .pain-card {
+        flex: 1;
+      }
+    }
+
+    /* Respect motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <!-- Image Temps Volé -->
+    <div class="hero-image">
+      <img src="tempsvole.png" alt="Temps volé - Épilation définitive">
+      <img src="https://depilpluslyon.fr/wp-content/uploads/2025/12/logodepilplus.png" alt="Depil Plus" class="hero-logo-overlay">
+    </div>
+
+    <!-- Colonne droite (texte + formulaire) -->
+    <div class="hero-right">
+      <div class="hero-content">
+        <h1 class="hero-hook">
+          Rasoir tous les 2 jours.<br>
+          Pour être nette pendant... <span class="highlight">48h.</span>
+        </h1>
+        <p class="hero-subhook">Et après ? Tu recommences. Encore. Et encore.</p>
+        <p class="hero-question">Jusqu'à quand ?</p>
+      </div>
+
+      <div class="form-card">
+      <p class="form-intro">Récupère <strong>ton temps</strong>. Pour de bon.</p>
+      <div class="urgency-banner">Offre d'ouverture -50% jusqu'au 31 janvier à Villeurbanne</div>
+
+      <form id="contact-form">
+        <p class="zones-label">Zone(s) souhaitée(s)</p>
+
+        <label class="zone-option highlight">
+          <input type="checkbox" name="zones" value="aisselles">
+          <span>Aisselles</span>
+          <span class="promo-badge">Offre ouverture -50%</span>
+        </label>
+
+        <label class="zone-option">
+          <input type="checkbox" name="zones" value="jambes">
+          <span>Jambes</span>
+        </label>
+
+        <label class="zone-option">
+          <input type="checkbox" name="zones" value="maillot">
+          <span>Maillot</span>
+        </label>
+
+        <label class="zone-option">
+          <input type="checkbox" name="zones" value="visage">
+          <span>Visage</span>
+        </label>
+
+        <label class="zone-option">
+          <input type="checkbox" name="zones" value="bras">
+          <span>Bras</span>
+        </label>
+
+        <label class="zone-option">
+          <input type="checkbox" name="zones" value="autre">
+          <span>Autre</span>
+        </label>
+
+        <div class="form-group hidden-field" id="name-group" style="margin-top: 20px;">
+          <label for="name">Nom complet *</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+
+        <div class="form-group hidden-field" id="phone-group">
+          <label for="phone">Téléphone *</label>
+          <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
+        </div>
+
+        <div class="consent-group hidden-field" id="consent-group">
+          <input type="checkbox" id="consent" name="consent" checked>
+          <label for="consent">J'accepte d'être contacté(e) par Dépil Plus pour ma demande de rendez-vous.*</label>
+        </div>
+
+        <!-- Champs UTM hidden -->
+        <input type="hidden" id="utm_source" name="utm_source" value="">
+        <input type="hidden" id="utm_medium" name="utm_medium" value="">
+        <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+        <input type="hidden" id="utm_content" name="utm_content" value="">
+        <input type="hidden" id="utm_term" name="utm_term" value="">
+
+        <button type="submit" class="submit-btn hidden-field" id="submit-btn">Je récupère mon temps</button>
+      </form>
+
+    </div>
+    </div>
+
+  </section>
+
+  <!-- PAIN POINT SECTION -->
+  <section class="pain-section">
+    <h2>Ce temps que tu perds,<br>tu ne le récupéreras jamais...</h2>
+
+    <div class="pain-cards">
+      <div class="pain-card">
+        <span class="pain-card-icon">⏰</span>
+        <p><strong>15 minutes tous les 2 jours</strong> = 45 heures par an passées à te raser</p>
+      </div>
+
+      <div class="pain-card">
+        <span class="pain-card-icon">🔄</span>
+        <p><strong>Une routine sans fin</strong> depuis des années. Combien d'heures perdues au total ?</p>
+      </div>
+
+      <div class="pain-card">
+        <span class="pain-card-icon">💭</span>
+        <p><strong>Ce stress constant</strong> : "Est-ce que j'ai le temps de me raser avant de sortir ?"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY SECTION -->
+  <section class="why-section">
+    <h2>Pourquoi Dépil+ ?</h2>
+
+    <div class="why-cards">
+      <div class="why-card">
+        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+        <h3>5 séances et c'est fini</h3>
+        <p>Résultats définitifs garantis. Pas 8 ou 12 séances comme ailleurs. 5 séances. Point.</p>
+      </div>
+
+      <div class="why-card">
+        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+        <h3>0 douleur</h3>
+        <p>Notre technologie de refroidissement rend le traitement totalement confortable. Vraiment.</p>
+      </div>
+
+      <div class="why-card">
+        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+        <h3>Protocole sur-mesure</h3>
+        <p>Pas de pack tout fait. Un protocole adapté à TON type de peau et de poil.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="process-section">
+    <h2>Comment ça se passe ?</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+          <span class="timeline-number">1</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Diagnostic personnalisé gratuit</h3>
+          <p>On analyse ta peau, tes poils, ton historique. On te dit exactement ce qu'il te faut.</p>
+          <span class="timeline-badge">Offert</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+          <span class="timeline-number">2</span>
+        </div>
+        <div class="timeline-content">
+          <h3>5 séances espacées de 6 semaines</h3>
+          <p>Séances rapides, indolores. Tu rentres, tu ressors, c'est fait.</p>
+          <span class="timeline-badge">Sans douleur</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="timeline-number">3</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Liberté totale</h3>
+          <p>Plus jamais de rasoir. Plus jamais cette routine. Tu récupères ton temps. Pour toujours.</p>
+          <span class="timeline-badge">Garanti</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT SECTION -->
+  <section class="engagement-section">
+    <h2>Notre engagement</h2>
+    <p class="subtitle">On ne te vend pas un pack. On te garantit un résultat.</p>
+
+    <div class="engagement-cards">
+      <div class="engagement-card">
+        <span class="engagement-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </span>
+        <p><strong>95% des poils éliminés</strong> après 5 séances ou on continue gratuitement</p>
+      </div>
+
+      <div class="engagement-card">
+        <span class="engagement-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+          </svg>
+        </span>
+        <p>Jusqu'à <strong>3 séances additionnelles offertes</strong> si besoin</p>
+      </div>
+
+      <div class="engagement-card">
+        <span class="engagement-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+        </span>
+        <p><strong>Suivi personnalisé</strong> tout au long de ton parcours</p>
+      </div>
+    </div>
+
+    <a href="#contact-form" class="cta-btn">Je récupère mon temps</a>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2>Une question ?<br>Contactez-nous</h2>
+    <p class="intro">Notre équipe est là pour répondre à toutes tes questions.</p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+        </div>
+        <span class="contact-item-text">04 65 84 17 66</span>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <span class="contact-item-text">
+          31 rue Edouard Aynard<br>
+          <small>Quartier Totem, Villeurbanne</small>
+        </span>
+      </div>
+    </div>
+
+    <a href="#contact-form" class="cta-btn">Je réserve mon RDV</a>
+  </section>
+
+  <!-- OTHER ANGLES SECTION -->
+  <section class="other-angles">
+    <h2>Ou peut-être que...</h2>
+    <div class="hub-cards">
+      <a href="estheticienne.html" class="hub-card">
+        <span class="hub-card-icon">💸</span>
+        <h3>J'en ai marre de payer tous les mois</h3>
+        <p>Esthéticienne = un budget qui n'en finit jamais.</p>
+        <span class="hub-card-btn">C'est mon cas →</span>
+      </a>
+
+      <a href="peau-martyrisee.html" class="hub-card">
+        <span class="hub-card-icon">🩹</span>
+        <h3>J'en ai marre d'abîmer ma peau</h3>
+        <p>Coupures, rougeurs, boutons... Ta peau te supplie d'arrêter.</p>
+        <span class="hub-card-btn">C'est mon cas →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Dépil Plus Villeurbanne. Tous droits réservés.</p>
+    <p class="legal">Offre valable jusqu'au 31 janvier 2026 pour tout nouveau client.<br>Non cumulable avec d'autres offres.</p>
+  </footer>
+
+  <script>
+    // Récupérer les paramètres UTM de l'URL
+    function getUTMParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+      utmParams.forEach(param => {
+        const value = urlParams.get(param) || '';
+        const input = document.getElementById(param);
+        if (input) {
+          input.value = value;
+        }
+      });
+    }
+
+    getUTMParams();
+
+    // ========== AFFICHAGE PROGRESSIF DU FORMULAIRE ==========
+    const zoneCheckboxes = document.querySelectorAll('input[name="zones"]');
+    const nameGroup = document.getElementById('name-group');
+    const phoneGroup = document.getElementById('phone-group');
+    const consentGroup = document.getElementById('consent-group');
+    const submitBtn = document.getElementById('submit-btn');
+    const nameInput = document.getElementById('name');
+
+    zoneCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        const anyChecked = Array.from(zoneCheckboxes).some(cb => cb.checked);
+        if (anyChecked) {
+          nameGroup.classList.add('visible');
+          nameInput.focus();
+        } else {
+          if (nameInput.value.trim() === '') {
+            nameGroup.classList.remove('visible');
+          }
+        }
+      });
+    });
+
+    nameInput.addEventListener('input', function() {
+      if (this.value.trim().length > 0) {
+        phoneGroup.classList.add('visible');
+        consentGroup.classList.add('visible');
+        submitBtn.classList.add('visible');
+      } else {
+        phoneGroup.classList.remove('visible');
+        consentGroup.classList.remove('visible');
+        submitBtn.classList.remove('visible');
+      }
+    });
+
+    document.getElementById('phone').addEventListener('input', function(e) {
+      this.value = this.value.replace(/[a-zA-Z]/g, '');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    function validatePhone(phone) {
+      if (/[a-zA-Z]/.test(phone)) {
+        return false;
+      }
+      const cleanPhone = phone.replace(/[\s\-\.]/g, '');
+      const digitsOnly = cleanPhone.replace(/\+/g, '');
+      return digitsOnly.length >= 8 && /^[\+]?[0-9]+$/.test(cleanPhone);
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const phoneInput = document.getElementById('phone');
+      const phoneValue = phoneInput.value;
+
+      if (!validatePhone(phoneValue)) {
+        alert('Veuillez entrer un numéro de téléphone valide (chiffres et + uniquement, pas de lettres)');
+        phoneInput.focus();
+        return;
+      }
+
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Envoi en cours...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(this);
+      const zones = formData.getAll('zones');
+
+      const jsonData = {
+        nom: formData.get('name'),
+        telephone: formData.get('phone'),
+        zones: zones,
+        consent: true,
+        utm_source: formData.get('utm_source') || '',
+        utm_medium: formData.get('utm_medium') || '',
+        utm_campaign: formData.get('utm_campaign') || '',
+        utm_content: formData.get('utm_content') || '',
+        utm_term: formData.get('utm_term') || '',
+        date_soumission: new Date().toISOString()
+      };
+
+      try {
+        const response = await fetch('https://7621449bc37eeeb09f9682aad3533c.43.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/eb5299d998b84cb49478fa7ed006a18a/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=A4kjLwpRYF84Fx82ZcbTLablUSkA_2MrmeYEm30HR3Y', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(jsonData)
+        });
+
+        if (response.ok) {
+          window.location.href = 'https://depilpluslyon.fr/inscription-valide/';
+        } else {
+          throw new Error('Erreur lors de l\'envoi');
+        }
+      } catch (error) {
+        console.error('Erreur:', error);
+        alert('Une erreur est survenue. Veuillez réessayer.');
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

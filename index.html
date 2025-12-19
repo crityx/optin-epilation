@@ -278,7 +278,11 @@
       }
     }
 
-    .consent-group {
+    .consent-group.hidden-field {
+      display: none;
+    }
+
+    .consent-group.hidden-field.visible {
       display: flex;
       align-items: flex-start;
       gap: 10px;
@@ -804,415 +808,190 @@
       margin: 0;
       padding: 0;
     }
+
+    /* ========== HUB SECTION ========== */
+    .hub-section {
+      background: linear-gradient(to bottom, rgba(13, 24, 70, 0.85), rgba(13, 24, 70, 0.9)), url('https://depilpluslyon.fr/wp-content/uploads/2025/12/maillotdebain-1.jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px 60px;
+      position: relative;
+    }
+
+    .hub-logo {
+      width: 120px;
+      margin-bottom: 25px;
+    }
+
+    .hub-title {
+      font-family: 'Times New Roman', serif;
+      color: var(--white);
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .hub-subtitle {
+      color: var(--orange);
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .hub-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .hub-card {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .hub-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 130, 0, 0.3);
+    }
+
+    .hub-card-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .hub-card h3 {
+      color: var(--blue);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hub-card p {
+      color: var(--gray-text);
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .hub-card-btn {
+      display: inline-block;
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .hub-or {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .scroll-indicator-hub {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    .scroll-indicator-hub svg {
+      width: 30px;
+      height: 30px;
+      color: var(--white);
+      opacity: 0.6;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hub-logo {
+        width: 150px;
+      }
+
+      .hub-title {
+        font-size: 2.5rem;
+      }
+
+      .hub-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .hub-cards {
+        flex-direction: row;
+        max-width: 900px;
+        gap: 20px;
+      }
+
+      .hub-card {
+        flex: 1;
+        padding: 25px;
+      }
+
+      .hub-card h3 {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- URGENCY BANNER -->
   <div class="urgency-banner">Offre d'ouverture -50% jusqu'au 31 janvier</div>
 
-  <!-- HERO FORM SECTION -->
-  <section class="hero-form">
-    <img src="https://depilpluslyon.fr/wp-content/uploads/2025/12/logodepilplus.png" alt="Depil Plus" class="hero-logo">
+  <!-- HUB SECTION - Choix des angles -->
+  <section class="hub-section">
+    <img src="https://depilpluslyon.fr/wp-content/uploads/2025/12/logodepilplus.png" alt="Depil Plus" class="hub-logo">
+    <h1 class="hub-title">Et toi, c'est quoi ton problème ?</h1>
+    <p class="hub-subtitle">Choisis ce qui te parle le plus</p>
 
-    <div class="form-card">
-      <p class="form-intro">👉 L'épilation définitive, sans routine.</p>
-      <form id="contact-form">
-        <p class="zones-label">Zone(s) souhaitée(s)</p>
+    <div class="hub-cards">
+      <a href="temps-vole.html" class="hub-card">
+        <span class="hub-card-icon">&#x23F0;</span>
+        <h3>J'en ai marre de perdre mon temps</h3>
+        <p>Rasoir tous les 2 jours... pour 48h de tranquillité. Jusqu'à quand ?</p>
+        <span class="hub-card-btn">C'est mon cas &rarr;</span>
+      </a>
 
-        <label class="zone-option highlight">
-          <input type="checkbox" name="zones" value="aisselles">
-          <span>Aisselles</span>
-          <span class="promo-badge">Offre ouverture -50%</span>
-        </label>
+      <a href="estheticienne.html" class="hub-card">
+        <span class="hub-card-icon">&#x1F4B8;</span>
+        <h3>J'en ai marre de payer tous les mois</h3>
+        <p>Esthéticienne = 50€/mois. Un budget qui n'en finit jamais.</p>
+        <span class="hub-card-btn">C'est mon cas &rarr;</span>
+      </a>
 
-        <label class="zone-option">
-          <input type="checkbox" name="zones" value="jambes">
-          <span>Jambes</span>
-        </label>
-
-        <label class="zone-option">
-          <input type="checkbox" name="zones" value="maillot">
-          <span>Maillot</span>
-        </label>
-
-        <label class="zone-option">
-          <input type="checkbox" name="zones" value="visage">
-          <span>Visage</span>
-        </label>
-
-        <label class="zone-option">
-          <input type="checkbox" name="zones" value="bras">
-          <span>Bras</span>
-        </label>
-
-        <label class="zone-option">
-          <input type="checkbox" name="zones" value="autre">
-          <span>Autre</span>
-        </label>
-
-        <div class="form-group hidden-field" id="name-group" style="margin-top: 20px;">
-          <label for="name">Nom complet *</label>
-          <input type="text" id="name" name="name" placeholder="Votre nom" required>
-        </div>
-
-        <div class="form-group hidden-field" id="phone-group">
-          <label for="phone">Téléphone *</label>
-          <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
-        </div>
-
-        <div class="consent-group hidden-field" id="consent-group">
-          <input type="checkbox" id="consent" name="consent" checked>
-          <label for="consent">J&#39;accepte d&#39;&#234;tre contact&#233;(e) par D&#233;pil Plus pour ma demande de rendez-vous.*</label>
-        </div>
-
-        <!-- Champs UTM hidden -->
-        <input type="hidden" id="utm_source" name="utm_source" value="">
-        <input type="hidden" id="utm_medium" name="utm_medium" value="">
-        <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
-        <input type="hidden" id="utm_content" name="utm_content" value="">
-        <input type="hidden" id="utm_term" name="utm_term" value="">
-
-        <button type="submit" class="submit-btn hidden-field" id="submit-btn">C&#39;est parti !</button>
-      </form>
-
-      <div class="form-footer">
-        <div class="form-footer-item">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>R&#233;ponse 24h</span>
-        </div>
-        <div class="form-footer-item">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-          <span>Donn&#233;es s&#233;curis&#233;es</span>
-        </div>
-        <div class="form-footer-item">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          <span>Sans engagement</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY SECTION -->
-  <section class="why-section">
-    <h2>Pourquoi choisir D&#233;pil+ ?</h2>
-
-    <div class="why-cards">
-      <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>R&#233;sultats garantis</h3>
-        <p>95% des poils &#233;limin&#233;s* gr&#226;ce &#224; notre laser triple ondes nouvelle g&#233;n&#233;ration.</p>
-      </div>
-
-      <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>Ultra rapide</h3>
-        <p>Seulement 5 s&#233;ances n&#233;cessaires contre 8 &#224; 12 avec les autres m&#233;thodes laser classiques. S&#233;ances suppl&#233;mentaires offertes si le r&#233;sultat n&#39;est pas atteint*.</p>
-      </div>
-
-      <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>Sans douleur sans risque</h3>
-        <p>Temp&#233;rature contr&#244;l&#233;e et technologie de refroidissement pour un confort absolu pendant le traitement.</p>
-      </div>
-
-      <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>M&#234;me en &#233;t&#233;</h3>
-        <p>Compatible avec l&#39;exposition au soleil, gr&#226;ce &#224; notre protocole laser combin&#233; &#224; la lumi&#232;re LED.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS SECTION -->
-  <section class="process-section">
-    <h2>Comment &#231;a se passe ?</h2>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-          </svg>
-          <span class="timeline-number">1</span>
-        </div>
-        <div class="timeline-content">
-          <h3>Diagnostic personnalis&#233; gratuit</h3>
-          <p>Nous analysons votre peau et vos besoins pour &#233;tablir un protocole sur-mesure.</p>
-          <span class="timeline-badge">Offert</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
-          <span class="timeline-number">2</span>
-        </div>
-        <div class="timeline-content">
-          <h3>5 s&#233;ances espac&#233;es de 6 semaines</h3>
-          <p>S&#233;ances rapides et confortables, adapt&#233;es &#224; tous types de peau et de poils.</p>
-          <span class="timeline-badge">Sans douleur</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="timeline-number">3</span>
-        </div>
-        <div class="timeline-content">
-          <h3>R&#233;sultats d&#233;finitifs garantis</h3>
-          <p>95% de vos poils &#233;limin&#233;s d&#233;finitivement. S&#233;ances additionnelles offertes si besoin.</p>
-          <span class="timeline-badge">Garanti</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENT SECTION -->
-  <section class="engagement-section">
-    <h2>Notre engagement qualit&#233;</h2>
-    <p class="subtitle">Nous sommes tellement confiants dans nos r&#233;sultats que nous nous engageons &#224; vos c&#244;t&#233;s jusqu&#39;&#224; l&#39;&#233;limination compl&#232;te (95%).</p>
-
-    <div class="engagement-cards">
-      <div class="engagement-card">
-        <span class="engagement-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-        </span>
-        <p><strong>95% des poils &#233;limin&#233;s</strong> apr&#232;s 5 s&#233;ances ou nous continuons gratuitement</p>
-      </div>
-
-      <div class="engagement-card">
-        <span class="engagement-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-          </svg>
-        </span>
-        <p>Jusqu&#39;&#224; <strong>3 s&#233;ances additionnelles offertes</strong> si les r&#233;sultats ne sont pas atteints</p>
-      </div>
-
-      <div class="engagement-card">
-        <span class="engagement-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        </span>
-        <p><strong>Suivi personnalis&#233;</strong> tout au long de votre parcours</p>
-      </div>
+      <a href="peau-martyrisee.html" class="hub-card">
+        <span class="hub-card-icon">&#x1FA79;</span>
+        <h3>J'en ai marre d'abîmer ma peau</h3>
+        <p>Coupures, rougeurs, boutons... Ta peau te supplie d'arrêter.</p>
+        <span class="hub-card-btn">C'est mon cas &rarr;</span>
+      </a>
     </div>
 
-    <a href="#contact-form" class="cta-btn">Je r&#233;serve mon RDV</a>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section">
-    <h2>Une question ?<br>Contactez-nous</h2>
-    <p class="intro">Notre &#233;quipe est &#224; votre &#233;coute pour r&#233;pondre &#224; toutes vos questions sur l&#39;&#233;pilation laser d&#233;finitive.</p>
-
-    <div class="contact-info">
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-        </div>
-        <span class="contact-item-text">04 65 84 17 66</span>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </div>
-        <span class="contact-item-text">
-          31 rue Edouard Aynard<br>
-          <small>Quartier Totem, Villeurbanne</small>
-        </span>
-      </div>
-    </div>
-
-    <a href="#contact-form" class="cta-btn">Je r&#233;serve mon RDV</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&#169; 2026 D&#233;pil Plus Villeurbanne. Tous droits r&#233;serv&#233;s.</p>
-    <p class="legal">Offre valable jusqu&#39;au 31 janvier 2026 pour tout nouveau client.<br>Non cumulable avec d&#39;autres offres.</p>
-  </footer>
-
-  <script>
-    // Récupérer les paramètres UTM de l'URL et les mettre dans les champs hidden
-    function getUTMParams() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
-
-      utmParams.forEach(param => {
-        const value = urlParams.get(param) || '';
-        const input = document.getElementById(param);
-        if (input) {
-          input.value = value;
-        }
-      });
-    }
-
-    // Appeler au chargement de la page
-    getUTMParams();
-
-    // ========== AFFICHAGE PROGRESSIF DU FORMULAIRE ==========
-    const zoneCheckboxes = document.querySelectorAll('input[name="zones"]');
-    const nameGroup = document.getElementById('name-group');
-    const phoneGroup = document.getElementById('phone-group');
-    const consentGroup = document.getElementById('consent-group');
-    const submitBtn = document.getElementById('submit-btn');
-    const nameInput = document.getElementById('name');
-
-    // Quand une zone est cochée, afficher le champ nom
-    zoneCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', function() {
-        const anyChecked = Array.from(zoneCheckboxes).some(cb => cb.checked);
-        if (anyChecked) {
-          nameGroup.classList.add('visible');
-          nameInput.focus();
-        } else {
-          // Si aucune zone cochée et nom vide, cacher le champ nom
-          if (nameInput.value.trim() === '') {
-            nameGroup.classList.remove('visible');
-          }
-        }
-      });
-    });
-
-    // Quand le nom commence à être rempli, afficher le téléphone
-    nameInput.addEventListener('input', function() {
-      if (this.value.trim().length > 0) {
-        phoneGroup.classList.add('visible');
-        consentGroup.classList.add('visible');
-        submitBtn.classList.add('visible');
-      } else {
-        // Si le nom est vidé, cacher les champs suivants
-        phoneGroup.classList.remove('visible');
-        consentGroup.classList.remove('visible');
-        submitBtn.classList.remove('visible');
-      }
-    });
-
-    // Bloquer les lettres dans le champ téléphone (autoriser uniquement chiffres, +, espaces, tirets, points)
-    document.getElementById('phone').addEventListener('input', function(e) {
-      this.value = this.value.replace(/[a-zA-Z]/g, '');
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Validation du téléphone : uniquement chiffres, espaces et + autorisés (pas de lettres)
-    function validatePhone(phone) {
-      // Vérifier qu'il n'y a pas de lettres et uniquement des chiffres, espaces, + - .
-      if (/[a-zA-Z]/.test(phone)) {
-        return false;
-      }
-
-      // Supprimer les espaces, tirets et points pour compter les chiffres
-      const cleanPhone = phone.replace(/[\s\-\.]/g, '');
-
-      // Doit contenir au moins 8 chiffres (hors +)
-      const digitsOnly = cleanPhone.replace(/\+/g, '');
-      return digitsOnly.length >= 8 && /^[\+]?[0-9]+$/.test(cleanPhone);
-    }
-
-    // Form submission handler
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      const phoneInput = document.getElementById('phone');
-      const phoneValue = phoneInput.value;
-
-      // Valider le téléphone
-      if (!validatePhone(phoneValue)) {
-        alert('Veuillez entrer un numéro de téléphone valide (chiffres et + uniquement, pas de lettres)');
-        phoneInput.focus();
-        return;
-      }
-
-      const submitBtn = this.querySelector('.submit-btn');
-      const originalBtnText = submitBtn.textContent;
-      submitBtn.textContent = 'Envoi en cours...';
-      submitBtn.disabled = true;
-
-      // Get form data
-      const formData = new FormData(this);
-
-      // Get selected zones
-      const zones = formData.getAll('zones');
-
-      // Construire l'objet JSON à envoyer
-      const jsonData = {
-        nom: formData.get('name'),
-        telephone: formData.get('phone'),
-        zones: zones,
-        consent: true,
-        utm_source: formData.get('utm_source') || '',
-        utm_medium: formData.get('utm_medium') || '',
-        utm_campaign: formData.get('utm_campaign') || '',
-        utm_content: formData.get('utm_content') || '',
-        utm_term: formData.get('utm_term') || '',
-        date_soumission: new Date().toISOString()
-      };
-
-      try {
-        // Envoyer les données à Power Automate
-        const response = await fetch('https://7621449bc37eeeb09f9682aad3533c.43.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/eb5299d998b84cb49478fa7ed006a18a/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=A4kjLwpRYF84Fx82ZcbTLablUSkA_2MrmeYEm30HR3Y', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(jsonData)
-        });
-
-        if (response.ok) {
-          // Rediriger vers la page de confirmation
-          window.location.href = 'https://depilpluslyon.fr/inscription-valide/';
-        } else {
-          throw new Error('Erreur lors de l\'envoi');
-        }
-      } catch (error) {
-        console.error('Erreur:', error);
-        alert('Une erreur est survenue. Veuillez réessayer.');
-        submitBtn.textContent = originalBtnText;
-        submitBtn.disabled = false;
-      }
-    });
-  </script>
 </body>
 </html>
