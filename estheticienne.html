@@ -68,6 +68,37 @@
       z-index: 10;
     }
 
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 5;
+    }
+
+    .hero-image-text {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--white);
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5);
+      z-index: 10;
+      padding: 15px 20px;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
     .hero-right {
       display: flex;
       flex-direction: column;
@@ -689,6 +720,10 @@
       text-align: center;
     }
 
+    .process-gallery .cta-btn {
+      margin-top: 30px;
+    }
+
     .process-gallery h2 {
       font-family: 'Times New Roman', serif;
       color: var(--blue);
@@ -1061,6 +1096,18 @@
         object-fit: cover;
       }
 
+      .hero-image::after {
+        display: none;
+      }
+
+      .hero-image-text {
+        display: none;
+      }
+
+      .desktop-only {
+        display: inline;
+      }
+
       .hero-right {
         width: 40%;
         display: flex;
@@ -1166,13 +1213,14 @@
     <div class="hero-image">
       <img src="esteticienne.png" alt="Esthéticienne - Épilation définitive">
       <img src="https://depilpluslyon.fr/wp-content/uploads/2025/12/logodepilplus.png" alt="Depil Plus" class="hero-logo-overlay">
+      <div class="hero-image-text">"Esthéticienne tous les mois : sacré budget."</div>
     </div>
 
     <!-- Colonne droite (texte + formulaire) -->
     <div class="hero-right">
       <div class="hero-content">
         <h1 class="hero-hook">
-          Esthéticienne tous les mois :<br>
+          <span class="desktop-only">Esthéticienne tous les mois :<br></span>
           <span class="highlight">Sacré budget.</span>
         </h1>
         <p class="hero-subhook">Pour être nette 3 semaines. Puis recommencer. Tous les mois. Toute l'année.</p>
@@ -1180,8 +1228,7 @@
       </div>
 
       <div class="form-card">
-        <p class="form-intro">Un <strong>investissement unique</strong>. Des résultats définitifs.</p>
-        <div class="urgency-banner">Offre d'ouverture -50% jusqu'au 31 janvier à Villeurbanne</div>
+        <div class="urgency-banner">Offre d'ouverture -50%<br>jusqu'au 31 janvier à Villeurbanne</div>
 
       <form id="contact-form">
         <p class="zones-label">Zone(s) souhaitée(s)</p>
@@ -1227,7 +1274,7 @@
           <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
         </div>
 
-        <div class="consent-group hidden-field" id="consent-group">
+        <div class="consent-group visible" id="consent-group">
           <input type="checkbox" id="consent" name="consent" checked>
           <label for="consent">J'accepte d'être contacté(e) par Dépil Plus pour ma demande de rendez-vous.*</label>
         </div>
@@ -1239,7 +1286,7 @@
         <input type="hidden" id="utm_content" name="utm_content" value="">
         <input type="hidden" id="utm_term" name="utm_term" value="">
 
-        <button type="submit" class="submit-btn hidden-field" id="submit-btn">Je réserve mon bilan gratuit</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Je réserve mon bilan gratuit</button>
       </form>
 
     </div>
@@ -1478,25 +1525,15 @@
         const anyChecked = Array.from(zoneCheckboxes).some(cb => cb.checked);
         if (anyChecked) {
           nameGroup.classList.add('visible');
+          phoneGroup.classList.add('visible');
           nameInput.focus();
         } else {
           if (nameInput.value.trim() === '') {
             nameGroup.classList.remove('visible');
+            phoneGroup.classList.remove('visible');
           }
         }
       });
-    });
-
-    nameInput.addEventListener('input', function() {
-      if (this.value.trim().length > 0) {
-        phoneGroup.classList.add('visible');
-        consentGroup.classList.add('visible');
-        submitBtn.classList.add('visible');
-      } else {
-        phoneGroup.classList.remove('visible');
-        consentGroup.classList.remove('visible');
-        submitBtn.classList.remove('visible');
-      }
     });
 
     document.getElementById('phone').addEventListener('input', function(e) {
