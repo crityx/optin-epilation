@@ -839,11 +839,23 @@
       padding-left: 30px;
     }
 
-    .testimonial-card:nth-child(n+4) {
+    .testimonial-card {
       display: none;
     }
 
-    .testimonials-grid.show-all .testimonial-card:nth-child(n+4) {
+    .testimonial-card:nth-child(-n+3) {
+      display: block;
+    }
+
+    .testimonials-grid.show-6 .testimonial-card:nth-child(-n+6) {
+      display: block;
+    }
+
+    .testimonials-grid.show-9 .testimonial-card:nth-child(-n+9) {
+      display: block;
+    }
+
+    .testimonials-grid.show-all .testimonial-card {
       display: block;
     }
 
@@ -872,7 +884,7 @@
     }
 
     @media (min-width: 768px) {
-      .testimonial-card:nth-child(n+4) {
+      .testimonial-card {
         display: block;
       }
       .voir-plus-btn {
@@ -1618,7 +1630,7 @@
         <p>On se sent tellement bien dans ce centre. Petit café, ambiance douce, équipe aux petits soins… on oublie qu'on vient pour un truc "technique". J'adore.</p>
       </div>
     </div>
-    <button class="voir-plus-btn" onclick="this.previousElementSibling.classList.add('show-all'); this.classList.add('hidden');">Voir plus d'avis</button>
+    <button class="voir-plus-btn" onclick="var grid=this.previousElementSibling; if(!grid.classList.contains('show-6')){grid.classList.add('show-6');} else if(!grid.classList.contains('show-9')){grid.classList.add('show-9');} else {grid.classList.add('show-all'); this.classList.add('hidden');}">Voir plus d'avis</button>
     <a href="#contact-form" class="cta-btn" style="margin-top: 30px;">Je réserve mon bilan gratuit</a>
   </section>
 
