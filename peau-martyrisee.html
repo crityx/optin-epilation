@@ -589,7 +589,6 @@
       border: 2px solid var(--orange);
       border-radius: 12px;
       padding: 24px 20px;
-      padding-left: 30px;
     }
 
     .why-card::before {
@@ -610,6 +609,17 @@
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title-star {
+      width: 18px;
+      height: 18px;
+      color: var(--orange);
+      fill: var(--orange);
+      flex-shrink: 0;
     }
 
     .why-card p {
@@ -1397,26 +1407,17 @@
 
     <div class="why-cards">
       <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>0 douleur, vraiment</h3>
+        <h3><svg class="title-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> 0 douleur, vraiment</h3>
         <p>Notre technologie de refroidissement rend le traitement totalement confortable. Fini la souffrance.</p>
       </div>
 
       <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>Peau respectée</h3>
+        <h3><svg class="title-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> Peau respectée</h3>
         <p>Le laser cible uniquement le poil. Ta peau n'est plus agressée. Elle peut enfin respirer.</p>
       </div>
 
       <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>Résultats définitifs</h3>
+        <h3><svg class="title-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> Résultats définitifs</h3>
         <p>Plus de poil = plus de rasage = plus jamais d'irritation. La solution permanente.</p>
       </div>
     </div>
