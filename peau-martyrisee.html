@@ -1268,7 +1268,7 @@
         <input type="hidden" id="utm_content" name="utm_content" value="">
         <input type="hidden" id="utm_term" name="utm_term" value="">
 
-        <button type="submit" class="submit-btn hidden-field" id="submit-btn">Je prends soin de ma peau</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Je prends soin de ma peau</button>
       </form>
 
     </div>
@@ -1556,25 +1556,17 @@
         const anyChecked = Array.from(zoneCheckboxes).some(cb => cb.checked);
         if (anyChecked) {
           nameGroup.classList.add('visible');
+          phoneGroup.classList.add('visible');
+          consentGroup.classList.add('visible');
           nameInput.focus();
         } else {
           if (nameInput.value.trim() === '') {
             nameGroup.classList.remove('visible');
+            phoneGroup.classList.remove('visible');
+            consentGroup.classList.remove('visible');
           }
         }
       });
-    });
-
-    nameInput.addEventListener('input', function() {
-      if (this.value.trim().length > 0) {
-        phoneGroup.classList.add('visible');
-        consentGroup.classList.add('visible');
-        submitBtn.classList.add('visible');
-      } else {
-        phoneGroup.classList.remove('visible');
-        consentGroup.classList.remove('visible');
-        submitBtn.classList.remove('visible');
-      }
     });
 
     document.getElementById('phone').addEventListener('input', function(e) {
