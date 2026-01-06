@@ -839,6 +839,47 @@
       padding-left: 30px;
     }
 
+    .testimonial-card:nth-child(n+4) {
+      display: none;
+    }
+
+    .testimonials-grid.show-all .testimonial-card:nth-child(n+4) {
+      display: block;
+    }
+
+    .voir-plus-btn {
+      display: block;
+      margin: 25px auto 0;
+      padding: 12px 25px;
+      background: transparent;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .voir-plus-btn:hover {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .voir-plus-btn.hidden {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .testimonial-card:nth-child(n+4) {
+        display: block;
+      }
+      .voir-plus-btn {
+        display: none;
+      }
+    }
+
     /* ========== ENGAGEMENT SECTION ========== */
     .engagement-section {
       background: var(--white);
@@ -1577,6 +1618,7 @@
         <p>On se sent tellement bien dans ce centre. Petit café, ambiance douce, équipe aux petits soins… on oublie qu'on vient pour un truc "technique". J'adore.</p>
       </div>
     </div>
+    <button class="voir-plus-btn" onclick="this.previousElementSibling.classList.add('show-all'); this.classList.add('hidden');">Voir plus d'avis</button>
     <a href="#contact-form" class="cta-btn" style="margin-top: 30px;">Je réserve mon bilan gratuit</a>
   </section>
 
