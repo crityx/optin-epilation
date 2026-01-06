@@ -562,19 +562,6 @@
       border: 2px solid var(--orange);
       border-radius: 12px;
       padding: 24px 20px;
-      padding-left: 30px;
-    }
-
-    .why-card::before {
-      content: '';
-      position: absolute;
-      left: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      background: var(--orange);
-      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     }
 
     .why-card h3 {
@@ -583,27 +570,23 @@
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title-star {
+      width: 18px;
+      height: 18px;
+      color: var(--orange);
+      fill: var(--orange);
+      flex-shrink: 0;
     }
 
     .why-card p {
       color: var(--blue);
       font-size: 0.95rem;
       line-height: 1.5;
-    }
-
-    .why-card-icon {
-      position: absolute;
-      left: 0px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
-      color: var(--orange);
-      fill: var(--orange);
-    }
-
-    .why-card:has(.why-card-icon)::before {
-      display: none;
     }
 
     /* ========== PROCESS SECTION ========== */
@@ -1356,26 +1339,17 @@
 
     <div class="why-cards">
       <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>Investissement unique</h3>
+        <h3><svg class="title-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> Investissement unique</h3>
         <p>Tu paies une fois. Tu es tranquille pour toujours. Plus de budget mensuel.</p>
       </div>
 
       <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>5 séances seulement</h3>
+        <h3><svg class="title-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> 5 séances seulement</h3>
         <p>Résultats définitifs garantis en 5 séances. Pas de rallonge, pas de surprise.</p>
       </div>
 
       <div class="why-card">
-        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-        </svg>
-        <h3>Protocole transparent</h3>
+        <h3><svg class="title-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> Protocole transparent</h3>
         <p>Pas de vente de packs à répétition. On te dit exactement ce qu'il te faut.</p>
       </div>
     </div>
