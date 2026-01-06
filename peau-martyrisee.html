@@ -68,6 +68,21 @@
       z-index: 10;
     }
 
+    .hero-image-text {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      z-index: 10;
+      padding: 0 20px;
+    }
+
     .hero-right {
       display: flex;
       flex-direction: column;
@@ -1036,6 +1051,11 @@
         width: 100px;
       }
 
+      .hero-image-text {
+        font-size: 2.5rem;
+        bottom: 50px;
+      }
+
       .hero-logo {
         width: 150px;
       }
@@ -1199,13 +1219,13 @@
     <div class="hero-image">
       <img src="peau-martyrise.png" alt="Peau martyrisée - Épilation définitive">
       <img src="https://depilpluslyon.fr/wp-content/uploads/2025/12/logodepilplus.png" alt="Depil Plus" class="hero-logo-overlay">
+      <div class="hero-image-text">Coupures. Rougeurs. Boutons.</div>
     </div>
 
     <!-- Colonne droite (texte + formulaire) -->
     <div class="hero-right">
       <div class="hero-content">
         <h1 class="hero-hook">
-          Coupures. Rougeurs. Boutons.<br>
           <span class="highlight">C'est pas une routine beauté.</span>
         </h1>
         <p class="hero-subhook">C'est une torture. Ton corps te supplie d'arrêter de lui faire ça.</p>
