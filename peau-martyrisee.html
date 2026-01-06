@@ -1256,7 +1256,7 @@
           <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
         </div>
 
-        <div class="consent-group hidden-field" id="consent-group">
+        <div class="consent-group visible" id="consent-group">
           <input type="checkbox" id="consent" name="consent" checked>
           <label for="consent">J'accepte d'être contacté(e) par Dépil Plus pour ma demande de rendez-vous.*</label>
         </div>
@@ -1557,13 +1557,11 @@
         if (anyChecked) {
           nameGroup.classList.add('visible');
           phoneGroup.classList.add('visible');
-          consentGroup.classList.add('visible');
           nameInput.focus();
         } else {
           if (nameInput.value.trim() === '') {
             nameGroup.classList.remove('visible');
             phoneGroup.classList.remove('visible');
-            consentGroup.classList.remove('visible');
           }
         }
       });
