@@ -621,6 +621,57 @@
       margin-top: 30px;
     }
 
+    /* ========== TESTIMONIALS SECTION ========== */
+    .testimonials-section {
+      background: var(--cream);
+      padding: 50px 20px;
+    }
+
+    .testimonials-section h2 {
+      font-family: 'Times New Roman', serif;
+      color: var(--blue);
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .testimonials-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Times New Roman', serif;
+      font-size: 4rem;
+      color: var(--orange);
+      opacity: 0.3;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      font-size: 0.95rem;
+      color: var(--blue);
+      line-height: 1.6;
+      font-style: italic;
+      padding-left: 30px;
+    }
+
     .process-gallery h2 {
       font-family: 'Times New Roman', serif;
       color: var(--blue);
@@ -1310,6 +1361,53 @@
       </div>
     </div>
     <a href="#contact-form" class="cta-btn">Je réserve mon bilan gratuit</a>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials-section">
+    <h2>Ce qu'elles en disent</h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>Franchement bluffée… j'avais déjà testé l'épilation laser ailleurs et j'avais toujours fini par racheter des séances. Ici, en 4 séances j'avais quasiment tout. Je ne pensais pas que ça pouvait être aussi efficace.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Je redoutais un peu la douleur et au final… rien du tout. Même sur les zones sensibles. Je pensais que c'était impossible et pourtant si.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Le vrai plus pour moi : j'ai pu continuer les séances pendant l'été sans devoir tout arrêter. Quand on part en vacances c'est juste parfait.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Centre super cosy, joliment décoré, ambiance hyper zen. Les esthéticiennes sont adorables et prennent le temps d'expliquer. On se sent vraiment en confiance.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Au début je trouvais que c'était un budget… mais finalement comme j'ai eu mes résultats en quelques séances, ça m'a coûté moins cher que mes anciens centres. Vraiment contente d'avoir tenté.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Dès la 2e séance, j'ai vu une vraie différence. Les poils repoussaient beaucoup moins et beaucoup plus lentement. J'ai même arrêté de me raser entre les séances.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Le diagnostic gratuit au début est super rassurant. Elles regardent vraiment la peau, les habitudes, le type de poil… On voit que c'est fait sérieusement.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>J'ai fait le maillot intégral… je pensais souffrir mais non. Aucune douleur. Honnêtement je n'en reviens toujours pas.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>J'ai la peau sensible et j'avais peur de réagir. Rien du tout, pas de rougeurs, pas de brûlures, et la séance est super rapide.</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p>On se sent tellement bien dans ce centre. Petit café, ambiance douce, équipe aux petits soins… on oublie qu'on vient pour un truc "technique". J'adore.</p>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT SECTION -->
