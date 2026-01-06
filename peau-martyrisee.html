@@ -591,17 +591,6 @@
       padding: 24px 20px;
     }
 
-    .why-card::before {
-      content: '';
-      position: absolute;
-      left: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      background: var(--orange);
-      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    }
 
     .why-card h3 {
       color: var(--orange);
@@ -628,20 +617,6 @@
       line-height: 1.5;
     }
 
-    .why-card-icon {
-      position: absolute;
-      left: 0px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
-      color: var(--orange);
-      fill: var(--orange);
-    }
-
-    .why-card:has(.why-card-icon)::before {
-      display: none;
-    }
 
     /* ========== PROCESS SECTION ========== */
     .process-section {
