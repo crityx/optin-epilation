@@ -665,6 +665,47 @@
       margin-top: 30px;
     }
 
+    /* ========== BEFORE/AFTER SECTION ========== */
+    .before-after-section {
+      padding: 60px 20px;
+      background: var(--gray-light);
+      text-align: center;
+    }
+
+    .before-after-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      color: var(--blue);
+      margin-bottom: 40px;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .before-after-card {
+      background: var(--white);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .before-after-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .before-after-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     /* ========== TESTIMONIALS SECTION ========== */
     .testimonials-section {
       background: var(--white);
@@ -1637,6 +1678,22 @@
       </div>
     </div>
     <a href="#contact-form" class="cta-btn">Je réserve mon bilan gratuit</a>
+  </section>
+
+  <!-- BEFORE/AFTER SECTION -->
+  <section class="before-after-section">
+    <h2>Avant / Après</h2>
+    <div class="before-after-grid">
+      <div class="before-after-card">
+        <img src="https://cdn.prod.website-files.com/66753945bb0c37aebba25e38/671624ef78a3dccbefa326df_1%20(24).avif" alt="Résultat épilation laser avant après" loading="lazy">
+      </div>
+      <div class="before-after-card">
+        <img src="https://cdn.prod.website-files.com/66753945bb0c37aebba25e38/671624e789a7a15aa5dbe3c9_5%20(13).avif" alt="Résultat épilation laser avant après" loading="lazy">
+      </div>
+      <div class="before-after-card">
+        <img src="https://cdn.prod.website-files.com/66753945bb0c37aebba25e38/672c80f59efe5a1bcaf59f1c_12%20(3).avif" alt="Résultat épilation laser avant après" loading="lazy">
+      </div>
+    </div>
   </section>
 
   <!-- TESTIMONIALS SECTION -->
