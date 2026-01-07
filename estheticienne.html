@@ -1158,22 +1158,94 @@
 
     /* ========== FOOTER ========== */
     .footer {
-      background: var(--white);
-      padding: 25px 20px;
+      background: var(--blue);
+      padding: 50px 20px 30px;
       text-align: center;
-      border-top: 1px solid var(--gray-light);
     }
 
-    .footer p {
-      color: var(--blue);
-      font-size: 0.85rem;
+    .footer-title {
+      color: var(--white);
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
-    .footer .legal {
-      color: var(--gray-text);
+    .footer-intro {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+    }
+
+    .footer-contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-contact-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--white);
+    }
+
+    .footer-contact-text {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .footer-contact-text small {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .footer-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--orange);
+      margin: 25px auto;
+    }
+
+    .footer p {
+      color: rgba(255,255,255,0.6);
       font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+
+    .footer .legal {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.75rem;
       line-height: 1.5;
+    }
+
+    @media (min-width: 768px) {
+      .footer-contact {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+      }
     }
 
     /* ========== ANIMATIONS ========== */
@@ -1396,38 +1468,33 @@
     }
 
     .faq-icon {
-      width: 24px;
-      height: 24px;
-      position: relative;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #ff5500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
-    }
-
-    .faq-icon::before,
-    .faq-icon::after {
-      content: '';
-      position: absolute;
-      background: var(--orange);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .faq-icon::before {
-      width: 100%;
-      height: 2px;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform 0.3s ease;
     }
 
-    .faq-icon::after {
-      width: 2px;
-      height: 100%;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
+    .faq-item.active .faq-icon {
+      box-shadow: 0 4px 15px rgba(255, 130, 0, 0.4);
     }
 
-    .faq-item.active .faq-icon::after {
-      transform: translateX(-50%) rotate(90deg);
+    .faq-item.active .faq-icon::before {
+      transform: rotate(-135deg) translateY(-2px);
     }
 
     .faq-answer {
@@ -1688,36 +1755,6 @@
     <a href="#contact-form" class="cta-btn" style="margin-top: 30px;">Je réserve mon bilan gratuit</a>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section">
-    <h2>Parlons de vous!</h2>
-    <p class="intro">Notre équipe est là pour répondre à toutes tes questions.</p>
-
-    <div class="contact-info">
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-        </div>
-        <span class="contact-item-text">04 65 84 17 66</span>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </div>
-        <span class="contact-item-text">
-          31 rue Edouard Aynard<br>
-          <small>Quartier Totem, Villeurbanne</small>
-        </span>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ SECTION -->
   <section class="faq-section">
     <h2>Les questions que vous vous posez peut-être...</h2>
@@ -1808,6 +1845,33 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+    <h3 class="footer-title">Parlons de vous!</h3>
+    <p class="footer-intro">Notre équipe est là pour répondre à toutes tes questions.</p>
+
+    <div class="footer-contact">
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+        </div>
+        <span class="footer-contact-text">04 65 84 17 66</span>
+      </div>
+
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <span class="footer-contact-text">
+          31 rue Edouard Aynard<small>Quartier Totem, Villeurbanne</small>
+        </span>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
     <p>&copy; 2026 Dépil Plus Villeurbanne. Tous droits réservés.</p>
     <p class="legal">Offre valable jusqu'au 31 janvier 2026 pour tout nouveau client.<br>Non cumulable avec d'autres offres.</p>
   </footer>
