@@ -1129,15 +1129,14 @@
       .hero-section {
         min-height: 100vh;
         padding: 0;
-        flex-direction: row;
-        align-items: stretch;
-        background: var(--cream);
+        position: relative;
+        display: block;
       }
 
       .hero-image {
-        width: 60%;
-        margin-bottom: 0;
+        width: 100%;
         height: 100vh;
+        margin-bottom: 0;
       }
 
       .hero-image > img:first-child {
@@ -1146,38 +1145,20 @@
         object-fit: cover;
       }
 
-      
-      .hero-image-text {
-        display: none;
-      }
-
-      .desktop-only {
-        display: inline;
+      .hero-image::after {
+        height: 100%;
+        background: linear-gradient(to right, transparent 50%, rgba(0,0,0,0.7) 100%);
       }
 
       .hero-right {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        background: var(--cream);
-      }
-
-      .hero-content {
-        color: var(--blue);
-      }
-
-      .hero-hook {
-        text-shadow: none;
-      }
-
-      .hero-content {
-        max-width: 100%;
-        text-align: center;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        width: auto;
+        max-width: 420px;
         padding: 0;
-        margin-bottom: 30px;
+        background: transparent;
       }
 
       .form-card {
