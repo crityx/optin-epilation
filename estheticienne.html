@@ -1307,6 +1307,110 @@
       }
     }
 
+    /* ========== FAQ SECTION ========== */
+    .faq-section {
+      background: var(--white);
+      padding: 50px 20px;
+    }
+
+    .faq-section h2 {
+      font-family: 'Helvetica', Arial, sans-serif;
+      color: var(--blue);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--gray-light);
+      margin-bottom: 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: var(--orange);
+    }
+
+    .faq-question h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue);
+      margin: 0;
+      padding-right: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover h3 {
+      color: var(--orange);
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--orange);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-icon::before {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .faq-icon::after {
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .faq-item.active .faq-icon::after {
+      transform: translateX(-50%) rotate(90deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding-bottom: 20px;
+    }
+
+    .faq-answer p {
+      font-size: 0.95rem;
+      color: var(--gray-text);
+      line-height: 1.6;
+      margin: 0;
+    }
+
     /* Respect motion preferences */
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -1563,6 +1667,94 @@
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <h2>Les questions que vous vous posez peut-être...</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>À qui s'adresse l'épilation laser ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>À tous les types de peau même des plus claires au plus foncées, à tous les types de poils des plus clairs au plus foncés sauf les blancs.<br><br>Il existe quelques précautions à prendre, et certaines pathologies sont incompatibles avec l'épilation laser.<br><br>Nos esthéticiennes expertes vous détaillerons ces éléments lors du bilan personnalisé.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Combien de temps dure un traitement complet d'épilation laser ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>En moyenne il suffit de quatre à cinq séances pour obtenir un résultat définitif. Dans quelques cas particuliers, une ou deux séances complémentaires peuvent être nécessaire.<br><br>En cas de dérèglement hormonal, une repousse peut se produire.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Peut-on faire une épilation laser avec une peau noire ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Le laser est possible avec une peau noire.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Quel est le ressenti ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Le ressenti est une légère chaleur et aucune douleur.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Est-ce que je verrai des résultats dès la 1ère séance ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Il est possible que les poils tombent dès la fin de la première séance mais la majorité des résultats interviennent au bout de plusieurs séances (80 % dès la troisième séance en moyenne).</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Est-ce une méthode sûre ? Contre-indications ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>L'épilation laser et la méthode la plus sûre et la plus rapide sur le marché.<br><br>Il existe des contre-indications que nos expertes esthéticiennes vous détailleront lors du bilan de pilosité.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Quels sont les résultats après plusieurs séances ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Les résultats interviennent à partir de la première séance et ce de manière progressive jusqu'à la fin de la cure.<br><br>Les résultats sont définitifs sauf en cas de dérèglement hormonal.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>L'épilation définitive est-elle possible sur le duvet du visage ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Contrairement aux idées reçues, l'épilation au laser sur le duvet du visage n'est pas recommandé. Un faux risque de repousse paradoxal existe. C'est pourquoi, chez dépil+® nous vous recommandons l'épilation du duvet sur le visage par l'électrolyse.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Quelles parties du corps peut-on épiler ?</h3>
+          <span class="faq-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Il est possible d'épiler n'importe quelle partie du corps, il existe différentes technologies épilatoires qui seront détaillées par nos esthéticiennes expertes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2026 Dépil Plus Villeurbanne. Tous droits réservés.</p>
@@ -1690,6 +1882,16 @@
         submitBtn.textContent = originalBtnText;
         submitBtn.disabled = false;
       }
+    });
+
+    // ========== FAQ ACCORDION ==========
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
     });
   </script>
 </body>
