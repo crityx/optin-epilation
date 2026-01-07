@@ -1468,33 +1468,39 @@
     }
 
     .faq-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--orange), #ff5500);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 20px;
+      height: 20px;
+      position: relative;
       flex-shrink: 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .faq-icon::before {
+    .faq-icon::before,
+    .faq-icon::after {
       content: '';
-      width: 10px;
-      height: 10px;
-      border-right: 2px solid white;
-      border-bottom: 2px solid white;
-      transform: rotate(45deg) translateY(-2px);
+      position: absolute;
+      background: var(--orange);
       transition: transform 0.3s ease;
     }
 
-    .faq-item.active .faq-icon {
-      box-shadow: 0 4px 15px rgba(255, 130, 0, 0.4);
+    .faq-icon::before {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
     }
 
-    .faq-item.active .faq-icon::before {
-      transform: rotate(-135deg) translateY(-2px);
+    .faq-icon::after {
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .faq-item.active .faq-icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
     }
 
     .faq-answer {
