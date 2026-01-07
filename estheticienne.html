@@ -655,15 +655,6 @@
       padding-left: 60px;
     }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 30px;
-      top: 40px;
-      bottom: 40px;
-      width: 3px;
-      background: var(--orange);
-    }
 
     .timeline-item {
       position: relative;
@@ -692,6 +683,13 @@
       width: 24px;
       height: 24px;
       color: var(--orange);
+    }
+
+    .timeline-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
     .timeline-number {
@@ -1003,6 +1001,12 @@
       }
       .voir-plus-btn {
         display: none;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 900px;
       }
     }
 
@@ -1699,14 +1703,12 @@
 
   <!-- PROCESS SECTION -->
   <section class="process-section">
-    <h2>Des résultats définitifs en 3 étapes</h2>
+    <h2>Des résultats définitifs</h2>
 
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-          </svg>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPzkyhbttoxP63noS_Fadg7JRn9vSW89jm2JvS7=s1360-w1360-h1020-rw" alt="Bilan personnalisé">
           <span class="timeline-number">1</span>
         </div>
         <div class="timeline-content">
@@ -1718,9 +1720,7 @@
 
       <div class="timeline-item">
         <div class="timeline-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
+          <img src="4epilationdefinitivemachine.jpeg" alt="Traitement laser">
           <span class="timeline-number">2</span>
         </div>
         <div class="timeline-content">
@@ -1732,9 +1732,7 @@
 
       <div class="timeline-item">
         <div class="timeline-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+          <img src="plusderasoir.png" alt="Plus jamais de rasoir">
           <span class="timeline-number">3</span>
         </div>
         <div class="timeline-content">
