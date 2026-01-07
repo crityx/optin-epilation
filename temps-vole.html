@@ -733,24 +733,45 @@
       position: relative;
     }
 
-    .testimonial-card::before {
-      content: '"';
-      font-family: 'Times New Roman', serif;
-      font-size: 4rem;
-      color: var(--orange);
-      opacity: 0.3;
-      position: absolute;
-      top: 10px;
-      left: 15px;
-      line-height: 1;
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-initial {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #ff5500);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--blue);
+      font-size: 1rem;
     }
 
     .testimonial-card p {
       font-size: 0.95rem;
-      color: var(--blue);
+      color: var(--gray-text);
       line-height: 1.6;
       font-style: italic;
-      padding-left: 30px;
+      margin: 0;
     }
 
     .testimonial-card {
@@ -1637,43 +1658,51 @@
 
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <p>Franchement bluffée… j'avais déjà testé l'épilation laser ailleurs et j'avais toujours fini par racheter des séances. Ici, en 4 séances j'avais quasiment tout. Je ne pensais pas que ça pouvait être aussi efficace.</p>
+        <div class="testimonial-header">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/zoe.png" alt="Zoe" class="testimonial-avatar">
+          <span class="testimonial-name">Zoe</span>
+        </div>
+        <p>J'appréhendais un peu, mais la praticienne a été très bienveillante et m'a tout de suite mise à l'aise. Aucune douleur, juste une sensation de froid. La séance est rapide : 40 minutes pour le maillot intégral et les demi-jambes et aisselles.</p>
       </div>
 
       <div class="testimonial-card">
-        <p>Je redoutais un peu la douleur et au final… rien du tout. Même sur les zones sensibles. Je pensais que c'était impossible et pourtant si.</p>
+        <div class="testimonial-header">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/laurine.png" alt="Laurine" class="testimonial-avatar">
+          <span class="testimonial-name">Laurine</span>
+        </div>
+        <p>Je viens de sortir de l'épilation définitive. C'est incroyable, la technologie qu'ils ont, ça fait vraiment pas mal. Comparé à ce que je faisais avant, franchement je recommande. Et en plus, l'esthéticienne, elle est tellement gentille, elle te met hyper à l'aise. Vraiment, tu peux y aller les yeux fermés.</p>
       </div>
 
       <div class="testimonial-card">
-        <p>Le vrai plus pour moi : j'ai pu continuer les séances pendant l'été sans devoir tout arrêter. Quand on part en vacances c'est juste parfait.</p>
+        <div class="testimonial-header">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/radija.png" alt="Radija" class="testimonial-avatar">
+          <span class="testimonial-name">Radija</span>
+        </div>
+        <p>Première séance d'épilation : zéro douleur, zéro stress ! Franchement, je n'ai rien senti. Les filles étaient super sympas, on a papoté pendant toute la séance, du coup le temps est passé trop vite. Résultat : je ne me suis pas ennuyée une seule seconde et je suis sortie détendue.</p>
       </div>
 
       <div class="testimonial-card">
-        <p>Centre super cosy, joliment décoré, ambiance hyper zen. Les esthéticiennes sont adorables et prennent le temps d'expliquer. On se sent vraiment en confiance.</p>
+        <div class="testimonial-header">
+          <div class="testimonial-initial">A</div>
+          <span class="testimonial-name">Aurélie</span>
+        </div>
+        <p>J'ai été accueillie par Sophia. Franchement, au début j'avais très peur parce que je n'avais jamais essayé. Mais elle m'a tout de suite mise à l'aise, elle a été hyper douce et bienveillante. Contrairement à toutes les appréhensions qu'on peut avoir, je n'ai pas eu mal du tout. Vraiment rien. Super expérience, je recommande.</p>
       </div>
 
       <div class="testimonial-card">
-        <p>Au début je trouvais que c'était un budget… mais finalement comme j'ai eu mes résultats en quelques séances, ça m'a coûté moins cher que mes anciens centres. Vraiment contente d'avoir tenté.</p>
+        <div class="testimonial-header">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/camille.png" alt="Camille" class="testimonial-avatar">
+          <span class="testimonial-name">Camille</span>
+        </div>
+        <p>J'ai fait une séance d'aisselles chez Dépil Plus. J'ai été super bien accueillie, le lieu est très sympa, très cosy. La technologie utilisée fait qu'on n'a aucune douleur, vraiment aucune. Et dès la première séance, j'ai vu des résultats : au bout de dix jours, mes premiers poils sont tombés.</p>
       </div>
 
       <div class="testimonial-card">
-        <p>Dès la 2e séance, j'ai vu une vraie différence. Les poils repoussaient beaucoup moins et beaucoup plus lentement. J'ai même arrêté de me raser entre les séances.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <p>Le bilan gratuit au début est super rassurant. Elles regardent vraiment la peau, les habitudes, le type de poil… On voit que c'est fait sérieusement.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <p>J'ai fait le maillot intégral… je pensais souffrir mais non. Aucune douleur. Honnêtement je n'en reviens toujours pas.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <p>J'ai la peau sensible et j'avais peur de réagir. Rien du tout, pas de rougeurs, pas de brûlures, et la séance est super rapide.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <p>On se sent tellement bien dans ce centre. Petit café, ambiance douce, équipe aux petits soins… on oublie qu'on vient pour un truc "technique". J'adore.</p>
+        <div class="testimonial-header">
+          <div class="testimonial-initial">M</div>
+          <span class="testimonial-name">Marie</span>
+        </div>
+        <p>Magnifique ! Très contente de mes séances. Super accueil, prix très intéressant et très professionnel. Je recommande +++</p>
       </div>
     </div>
     <button class="voir-plus-btn" onclick="var grid=this.previousElementSibling; if(!grid.classList.contains('show-6')){grid.classList.add('show-6');} else if(!grid.classList.contains('show-9')){grid.classList.add('show-9');} else {grid.classList.add('show-all'); this.classList.add('hidden');}">Voir plus d'avis</button>
