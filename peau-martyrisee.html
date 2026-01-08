@@ -32,8 +32,10 @@
     }
 
     .mobile-header-logo {
-      height: 35px;
-      width: auto;
+      height: 35px !important;
+      max-height: 35px !important;
+      width: auto !important;
+      object-fit: contain !important;
     }
 
     .mobile-header-cta {
@@ -948,10 +950,10 @@
     }
 
     .testimonial-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      object-fit: cover !important;
     }
 
     .testimonial-initial {
@@ -1346,8 +1348,10 @@
 
     @media (min-width: 768px) {
       .footer-contact {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: flex-start;
+        gap: 60px;
       }
     }
 
@@ -1654,7 +1658,7 @@
 <body>
   <!-- MOBILE HEADER -->
   <header class="mobile-header">
-    <img src="depilpluslogo.png" alt="Dépil Plus" class="mobile-header-logo">
+    <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/depilpluslogo.png" alt="Dépil Plus" class="mobile-header-logo">
     <a href="#contact-form" class="mobile-header-cta">Réserver mon bilan gratuit</a>
   </header>
 
@@ -1662,7 +1666,7 @@
   <section class="hero-section">
     <!-- Image Peau Martyrisée -->
     <div class="hero-image">
-      <img src="test9.png" alt="Peau martyrisée - Épilation définitive">
+      <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/test9-scaled.png" alt="Peau martyrisée - Épilation définitive">
       </div>
 
     <!-- Colonne droite (formulaire) -->
@@ -1749,7 +1753,7 @@
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-icon">
-          <img src="bilan.png" alt="Bilan personnalisé">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/bilan.png" alt="Bilan personnalisé">
           <span class="timeline-number">1</span>
         </div>
         <div class="timeline-content">
@@ -1761,7 +1765,7 @@
 
       <div class="timeline-item">
         <div class="timeline-icon">
-          <img src="etape2.png" alt="Traitement laser">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/etape2.png" alt="Traitement laser">
           <span class="timeline-number">2</span>
         </div>
         <div class="timeline-content">
@@ -1773,7 +1777,7 @@
 
       <div class="timeline-item">
         <div class="timeline-icon">
-          <img src="plusderasoir.png" alt="Plus jamais de rasoir">
+          <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/plusderasoir.png" alt="Plus jamais de rasoir">
           <span class="timeline-number">3</span>
         </div>
         <div class="timeline-content">
@@ -1790,19 +1794,19 @@
     <h2>L'art du détail</h2>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="1gelepilation.jpeg" alt="Application du gel d'épilation">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/1gelepilation.jpeg" alt="Application du gel d'épilation">
         <span class="gallery-caption">Application du gel</span>
       </div>
       <div class="gallery-item">
-        <img src="2demarcationdeszones.jpeg" alt="Démarcation des zones à traiter">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/2demarcationdeszones.jpeg" alt="Démarcation des zones à traiter">
         <span class="gallery-caption">Démarcation des zones</span>
       </div>
       <div class="gallery-item">
-        <img src="3gelesurzone.jpeg" alt="Gel sur la zone de traitement">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/3gelesurzone.jpeg" alt="Gel sur la zone de traitement">
         <span class="gallery-caption">Préparation de la zone</span>
       </div>
       <div class="gallery-item">
-        <img src="4epilationdefinitivemachine.jpeg" alt="Machine d'épilation définitive">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/4epilationdefinitivemachine.jpeg" alt="Machine d'épilation définitive">
         <span class="gallery-caption">Traitement laser</span>
       </div>
       <div class="gallery-item">
@@ -1818,13 +1822,13 @@
     <h2>Avant / Après</h2>
     <div class="before-after-grid">
       <div class="before-after-card">
-        <img src="aisselles.png" alt="Résultat épilation laser aisselles avant après" loading="lazy">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/aisselles.jpg" alt="Résultat épilation laser aisselles avant après" loading="lazy">
       </div>
       <div class="before-after-card">
-        <img src="jambes.png" alt="Résultat épilation laser jambes avant après" loading="lazy">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/jambes.jpg" alt="Résultat épilation laser jambes avant après" loading="lazy">
       </div>
       <div class="before-after-card">
-        <img src="bras.png" alt="Résultat épilation laser bras avant après" loading="lazy">
+        <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/bras.jpg" alt="Résultat épilation laser bras avant après" loading="lazy">
       </div>
     </div>
   </section>

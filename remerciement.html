@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci - Depil Plus Lyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orange: #ff8200;
+      --blue: #0d1846;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --gray: #6b7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--blue);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      background: var(--white);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .logo {
+      height: 45px !important;
+      max-height: 45px !important;
+      width: auto !important;
+      object-fit: contain !important;
+      margin-bottom: 40px;
+    }
+
+    .title {
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--gray);
+      text-align: center;
+      max-width: 400px;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 40px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 0.9rem;
+      color: var(--blue);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e67500;
+      transform: translateY(-2px);
+    }
+
+    .phone {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .phone a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .title {
+        font-size: 2.2rem;
+      }
+
+      .logo {
+        height: 55px !important;
+        max-height: 55px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <img src="https://depilpluslyon.fr/wp-content/uploads/2026/01/depilpluslogo.png" alt="Depil Plus" class="logo">
+
+    <h1 class="title">Demande envoyée !</h1>
+    <p class="subtitle">Nous vous recontactons sous 24h pour fixer votre bilan gratuit.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <span class="step-text">Un conseiller vous appelle</span>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <span class="step-text">Bilan personnalisé gratuit</span>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <span class="step-text">Début de votre traitement</span>
+      </div>
+    </div>
+
+    <a href="https://depilpluslyon.fr" class="cta-btn">Retour à l'accueil</a>
+
+    <p class="phone">
+      Une question ? <a href="tel:0465841766">04 65 84 17 66</a>
+    </p>
+  </div>
+
+</body>
+</html>
